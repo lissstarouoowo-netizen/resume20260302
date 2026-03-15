@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>張怡媛 - 個人履歷</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family:"Microsoft JhengHei",sans-serif;
+    background:#f4f6f9;
+    color:#333;
+}
+
+/* Header */
+
+header{
+    background:#3a6ea5;
+    color:white;
+    text-align:center;
+    padding:40px 20px;
+}
+
+header h1{
+    margin:10px 0 5px 0;
+    font-size:36px;
+}
+
+header p{
+    margin:0;
+    font-size:16px;
+}
+
+/* 大頭照 */
+
+.profile-img{
+    width:150px;
+    height:150px;
+    border-radius:50%;
+    object-fit:cover;
+    border:4px solid white;
+    box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* 內容 */
+
+.container{
+    width:90%;
+    max-width:900px;
+    margin:auto;
+    padding:20px;
+}
+
+.card{
+    background:white;
+    border-radius:10px;
+    padding:20px;
+    margin-bottom:20px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+
+h2{
+    border-left:6px solid #3a6ea5;
+    padding-left:10px;
+}
+
+ul{
+    padding-left:20px;
+    line-height:1.8;
+}
+
+/* 按鈕 */
+
+button{
+    background:#3a6ea5;
+    color:white;
+    border:none;
+    padding:10px 15px;
+    border-radius:6px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#2d5a8a;
+}
+
+/* footer */
+
+footer{
+    text-align:center;
+    padding:20px;
+    color:#777;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<img src="履歷表照片.jpg" class="profile-img" alt="大頭照">
+
+<h1>張怡媛</h1>
+<p>亞洲大學 室內設計學系 | 學號：114055010</p>
+
+</header>
+
+
+<div class="container">
+
+
+<div class="card">
+<h2>基本資料</h2>
+<ul>
+<li>姓名：張怡媛</li>
+<li>學校：亞洲大學</li>
+<li>系所：室內設計學系</li>
+<li>學號：114055010</li>
+</ul>
+</div>
+
+
+<div class="card">
+<h2>自我介紹</h2>
+<p>
+我是亞洲大學室內設計學系學生，對空間設計與美學有高度興趣。
+目前正在學習室內空間規劃、設計表現以及設計軟體，希望未來能
+在室內設計或相關創意產業發展，持續累積設計經驗與作品。
+</p>
+</div>
+
+
+<div class="card">
+<h2>技能</h2>
+<ul>
+<li>AutoCAD 基礎繪圖</li>
+<li>SketchUp 建模</li>
+<li>Photoshop 基礎修圖</li>
+<li>HTML / CSS 基礎</li>
+</ul>
+</div>
+
+
+<div class="card">
+<h2>學習經歷</h2>
+<ul>
+<li>亞洲大學 室內設計學系（在學中）</li>
+<li>學習室內空間設計與規劃</li>
+<li>參與課堂設計專題與模型製作</li>
+</ul>
+</div>
+
+
+<div class="card">
+<h2>聯絡方式</h2>
+
+<ul>
+<li>gmail:lissstarouoowo@gmail.com</li>
+<li>作品集：<a href="#" target="_blank">Portfolio Link</a></li>
+</ul>
+
+<button onclick="copyEmail()">複製 Email</button>
+
+</div>
+
+
+</div>
+
+
+<footer>
+© 2026 張怡媛 Resume
+</footer>
+
+
+<script>
+
+function copyEmail(){
+    const email="lissstarouoowo@gmail.com";
+    navigator.clipboard.writeText(email);
+    alert("Email 已複製: " + email);
+}
+
+</script>
+
+</body>
+</html>
