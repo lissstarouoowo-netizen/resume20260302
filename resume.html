@@ -1,189 +1,229 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="zh-Hant">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>張怡媛 - 個人履歷</title>
-
-<style>
-
-body{
-    margin:0;
-    font-family:"Microsoft JhengHei",sans-serif;
-    background:#f4f6f9;
-    color:#333;
-}
-
-/* Header */
-
-header{
-    background:#3a6ea5;
-    color:white;
-    text-align:center;
-    padding:40px 20px;
-}
-
-header h1{
-    margin:10px 0 5px 0;
-    font-size:36px;
-}
-
-header p{
-    margin:0;
-    font-size:16px;
-}
-
-/* 大頭照 */
-
-.profile-photo{
-    width:100px;
-    height:100px;
-    border-radius:50%;
-    object-fit:cover;
-    border:4px solid white;
-    box-shadow:0 4px 10px rgba(0,0,0,0.2);
-}
-
-/* 內容 */
-
-.container{
-    width:90%;
-    max-width:900px;
-    margin:auto;
-    padding:20px;
-}
-
-.card{
-    background:white;
-    border-radius:10px;
-    padding:20px;
-    margin-bottom:20px;
-    box-shadow:0 2px 8px rgba(0,0,0,0.1);
-}
-
-h2{
-    border-left:6px solid #3a6ea5;
-    padding-left:10px;
-}
-
-ul{
-    padding-left:20px;
-    line-height:1.8;
-}
-
-/* 按鈕 */
-
-button{
-    background:#3a6ea5;
-    color:white;
-    border:none;
-    padding:10px 15px;
-    border-radius:6px;
-    cursor:pointer;
-}
-
-button:hover{
-    background:#2d5a8a;
-}
-
-/* footer */
-
-footer{
-    text-align:center;
-    padding:20px;
-    color:#777;
-}
-
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>張怡媛｜個人履歷</title>
+  <style>
+    *{box-sizing:border-box;}
+    body{
+      margin:0;
+      font-family:"Microsoft JhengHei","PingFang TC",sans-serif;
+      background:#eef1f3;
+      color:#222;
+      padding:24px;
+    }
+    .resume{
+      max-width:980px;
+      margin:0 auto;
+      background:#f7f7f7;
+      border:1px solid #cfcfcf;
+      display:grid;
+      grid-template-columns:260px 1fr;
+      min-height:1200px;
+      box-shadow:0 8px 24px rgba(0,0,0,.08);
+    }
+    .sidebar{
+      background:#3f3f41;
+      color:#fff;
+      padding:36px 28px;
+    }
+    .photo-wrap{
+      text-align:center;
+      margin-bottom:28px;
+    }
+    .profile-photo{
+      width:130px;
+      height:130px;
+      border-radius:50%;
+      object-fit:cover;
+      border:6px solid rgba(255,255,255,.18);
+      background:#d9d9d9;
+    }
+    .contact{
+      margin:24px 0 34px;
+      font-size:14px;
+      line-height:1.9;
+      word-break:break-word;
+    }
+    .side-section{
+      margin-top:28px;
+      padding-top:20px;
+      border-top:1px solid rgba(255,255,255,.35);
+    }
+    .side-section h3,
+    .main-section h2{
+      margin:0 0 14px;
+      font-size:22px;
+      letter-spacing:1px;
+      font-weight:700;
+    }
+    .side-section h3{
+      font-size:24px;
+    }
+    .side-section p,
+    .side-section li,
+    .main-section p,
+    .main-section li{
+      font-size:15px;
+      line-height:1.8;
+      margin:0;
+    }
+    .side-section ul,
+    .main-section ul{
+      margin:0;
+      padding-left:20px;
+    }
+    .main{
+      background:#f6f6f4;
+    }
+    .name-banner{
+      background:#a8c9c3;
+      padding:44px 36px 28px;
+    }
+    .name-banner h1{
+      margin:0;
+      font-size:44px;
+      letter-spacing:2px;
+      font-weight:500;
+    }
+    .main-content{
+      padding:30px 36px 40px;
+    }
+    .main-section{
+      padding:20px 0;
+      border-bottom:1px solid #8e8e8e;
+    }
+    .main-section:last-child{
+      border-bottom:none;
+    }
+    .main-section h2{
+      font-size:26px;
+    }
+    .skills-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:6px 28px;
+      padding-left:20px;
+      margin:0;
+    }
+    .job{
+      margin-bottom:22px;
+    }
+    .job:last-child{margin-bottom:0;}
+    .job-time{
+      font-size:14px;
+      color:#444;
+      margin-bottom:4px;
+    }
+    .job-title{
+      font-size:16px;
+      font-weight:700;
+      margin-bottom:8px;
+    }
+    .copy-btn{
+      margin-top:14px;
+      background:#a8c9c3;
+      color:#1f1f1f;
+      border:none;
+      border-radius:8px;
+      padding:10px 14px;
+      cursor:pointer;
+      font-size:14px;
+      font-weight:700;
+    }
+    .copy-btn:hover{opacity:.9;}
+    a{color:inherit;}
+    @media (max-width: 768px){
+      body{padding:0;}
+      .resume{
+        grid-template-columns:1fr;
+        min-height:auto;
+      }
+      .name-banner h1{font-size:34px;}
+      .skills-grid{grid-template-columns:1fr;}
+    }
+  </style>
 </head>
-
 <body>
+  <div class="resume">
+    <aside class="sidebar">
+      <div class="photo-wrap">
+        <img src="images/photo.jpg" alt="張怡媛大頭照" class="profile-photo" />
+      </div>
 
-<header>
+      <div class="contact">
+        <p>lissstarouoowo@gmail.com</p>
+        <p>亞洲大學｜室內設計學系</p>
+        <p>學號：114055010</p>
+        <button class="copy-btn" onclick="copyEmail()">複製 Email</button>
+      </div>
 
-<img src="images/photo.jpg" class="profile-photo" alt="profile photo">
+      <section class="side-section">
+        <h3>EDUCATION</h3>
+        <p><strong>亞洲大學</strong><br>室內設計學系<br>目前就讀中</p>
+      </section>
 
-<h1>張怡媛</h1>
-<p>亞洲大學 室內設計學系 | 學號：114055010</p>
+      <section class="side-section">
+        <h3>PROFILE</h3>
+        <p>個性細心、有耐心，對空間規劃與美感設計有高度興趣，持續學習設計軟體與實作能力，希望累積更多作品與經驗。</p>
+      </section>
+    </aside>
 
-</header>
+    <main class="main">
+      <div class="name-banner">
+        <h1>ZHANG YI-YUAN</h1>
+      </div>
 
+      <div class="main-content">
+        <section class="main-section">
+          <h2>PROFESSIONAL SUMMARY</h2>
+          <p>
+            我是亞洲大學室內設計學系學生，對室內空間規劃、設計表現與整體美學有濃厚興趣。
+            目前持續學習 AutoCAD、SketchUp 與 Photoshop 等設計工具，並透過課堂作業與專題製作，累積設計思考、模型實作與版面表現能力。
+          </p>
+        </section>
 
-<div class="container">
+        <section class="main-section">
+          <h2>SKILLS</h2>
+          <ul class="skills-grid">
+            <li>AutoCAD 基礎繪圖</li>
+            <li>SketchUp 建模</li>
+            <li>Photoshop 基礎修圖</li>
+            <li>版面編排與簡報製作</li>
+            <li>模型製作</li>
+            <li>HTML / CSS 基礎</li>
+          </ul>
+        </section>
 
+        <section class="main-section">
+          <h2>LEARNING EXPERIENCE</h2>
+          <div class="job">
+            <div class="job-time">2025 - 目前</div>
+            <div class="job-title">亞洲大學室內設計學系｜在學中</div>
+            <ul>
+              <li>學習室內空間設計、配置規劃與設計表現基礎。</li>
+              <li>參與課堂專題、模型製作與空間概念發想練習。</li>
+              <li>持續熟悉設計軟體操作，提升圖面與視覺呈現能力。</li>
+            </ul>
+          </div>
+        </section>
 
-<div class="card">
-<h2>基本資料</h2>
-<ul>
-<li>姓名：張怡媛</li>
-<li>學校：亞洲大學</li>
-<li>系所：室內設計學系</li>
-<li>學號：114055010</li>
-</ul>
-</div>
+        <section class="main-section">
+          <h2>CONTACT</h2>
+          <p>Email：lissstarouoowo@gmail.com</p>
+          <p>作品集：可依需求補上連結</p>
+        </section>
+      </div>
+    </main>
+  </div>
 
-
-<div class="card">
-<h2>自我介紹</h2>
-<p>
-我是亞洲大學室內設計學系學生，對空間設計與美學有高度興趣。
-目前正在學習室內空間規劃、設計表現以及設計軟體，希望未來能
-在室內設計或相關創意產業發展，持續累積設計經驗與作品。
-</p>
-</div>
-
-
-<div class="card">
-<h2>技能</h2>
-<ul>
-<li>AutoCAD 基礎繪圖</li>
-<li>SketchUp 建模</li>
-<li>Photoshop 基礎修圖</li>
-<li>HTML / CSS 基礎</li>
-</ul>
-</div>
-
-
-<div class="card">
-<h2>學習經歷</h2>
-<ul>
-<li>亞洲大學 室內設計學系（在學中）</li>
-<li>學習室內空間設計與規劃</li>
-<li>參與課堂設計專題與模型製作</li>
-</ul>
-</div>
-
-
-<div class="card">
-<h2>聯絡方式</h2>
-
-<ul>
-<li>gmail:lissstarouoowo@gmail.com</li>
-<li>作品集：<a href="#" target="_blank">Portfolio Link</a></li>
-</ul>
-
-<button onclick="copyEmail()">複製 Email</button>
-
-</div>
-
-
-</div>
-
-
-<footer>
-© 2026 張怡媛 Resume
-</footer>
-
-
-<script>
-
-function copyEmail(){
-    const email="lissstarouoowo@gmail.com";
-    navigator.clipboard.writeText(email);
-    alert("Email 已複製: " + email);
-}
-
-</script>
-
+  <script>
+    function copyEmail(){
+      const email = 'lissstarouoowo@gmail.com';
+      navigator.clipboard.writeText(email);
+      alert('Email 已複製：' + email);
+    }
+  </script>
 </body>
 </html>
